@@ -23,13 +23,6 @@ header {
     background-size: cover;
     height: 100dvh;
 
-    .overlay.see {
-        position: fixed;
-        background-color: rgba(0, 0, 0, 0.617);
-        inset: 0;
-        z-index: 8;
-    }
-
     nav {
         display: flex;
         justify-content: space-between;
@@ -634,7 +627,12 @@ footer {
 @media screen and (width<=768px) {
     header {
         background-position: center;
-
+        .overlay.see {
+            position: fixed;
+            background-color: rgba(0, 0, 0, 0.617);
+            inset: 0;
+            z-index: 8;
+        }
         .btns-about {
             display: flex;
             flex-direction: column;
