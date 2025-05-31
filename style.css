@@ -23,11 +23,22 @@ header {
     background-size: cover;
     height: 100dvh;
 
+    nav.scroll{
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        backdrop-filter: blur(5px);
+        background-color: rgba(0, 0, 0, 0.04);
+        z-index: 99;
+        box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2); 
+    }
     nav {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: min(2em, 10%) 0;
+        padding: clamp(12px,5vw,20px) 0;
+        transition: box-shadow background-color backdrop-filter 1s ease;
 
         button {
             display: none;
